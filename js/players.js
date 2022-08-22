@@ -1,5 +1,5 @@
 
-function players(player, event) {
+function players(player) {
     const nameListContainer = document.getElementById('selected-list');
     const playerNameElement = document.getElementById(player);
     const newPlayerName = playerNameElement.innerText;
@@ -9,5 +9,6 @@ function players(player, event) {
     li.innerText = newPlayerName;
     li.classList.add('item');
     nameListContainer.appendChild(li);
+
 }
 
