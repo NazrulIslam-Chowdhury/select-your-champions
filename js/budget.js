@@ -2,6 +2,10 @@ function recruitmentCost(fieldId) {
     const recruitmentPriceField = document.getElementById(fieldId);
     const recruitmentPriceString = recruitmentPriceField.value;
     const recruitmentPrice = parseInt(recruitmentPriceString);
+    if (isNaN(recruitmentPrice)) {
+        alert("Input only numbers!");
+        return;
+    }
     return recruitmentPrice;
 }
 
