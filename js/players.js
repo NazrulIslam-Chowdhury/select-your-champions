@@ -32,7 +32,12 @@ function players(player) {
     const newPlayerName = playerNameElement.innerText;
 
     const nameListContainer = document.getElementById('selected-list');
+
     const p = document.createElement('p');
     p.innerText = newPlayerName;
     nameListContainer.appendChild(p);
+    if (nameListContainer.childNodes() > 5) {
+        alert('Can not select more than 5 players!');
+        return;
+    }
 }
