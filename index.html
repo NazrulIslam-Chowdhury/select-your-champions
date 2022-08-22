@@ -84,13 +84,14 @@
             <div id="selected-list" class="text-white bg-slate-600 mr-auto mt-4 p-8">
                 <h1 class="font-bold text-center text-xl ">Budget</h1>
                 <hr>
-                <p class="mt-3">Per Player: <input class="w-1/2 text-black" type="text"></p>
-                <button class="text-center bg-sky-400 font-bold px-20 mt-3">Calculate</button>
+                <p class="mt-3">Per Player: <input id="perP-cost" class="w-1/2 text-black" type="text"></p>
+                <button id="calculation" class="text-center bg-sky-400 font-bold px-20 mt-3">Calculate</button>
                 <h1 class="text-center mt-3">Player Expenses: <span id="player-expenses">00</span></h1>
-                <p class="mt-3">Manager: <input class="w-1/2 text-black" type="text"></p>
-                <p class="mt-3">Coach: <input class="w-1/2 text-black ml-5" type="text"></p>
-                <button class="text-center bg-sky-400 font-bold px-16 mt-3">Calculate Total</button>
-                <h1 class="text-center mt-3">Player Expenses: <span id="calculate-total">00</span> </h1>
+                <p class="mt-3">Manager: <input id="manager-cost" class="w-1/2 text-black" type="text"></p>
+                <p class="mt-3">Coach: <input id="coach-cost" class="w-1/2 text-black ml-5" type="text"></p>
+                <button id="total-calculation" class="text-center bg-sky-400 font-bold px-16 mt-3">Calculate
+                    Total</button>
+                <h1 id="total" class="text-center mt-3">Total: <span id="calculate-total">00</span> </h1>
             </div>
         </section>
         <section class="grid grid-cols-4 mt-12 ml-20">
@@ -122,6 +123,7 @@
     </main>
     <script src="js/players.js"></script>
     <script src="js/callOut.function.js"></script>
+    <script src="js/budget.js"></script>
 </body>
 
 </html>
