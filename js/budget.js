@@ -1,33 +1,33 @@
 function recruitmentCost(fieldId) {
-    const recruitmentPriceField = document.getElementById(fieldId);
-    const recruitmentPriceString = recruitmentPriceField.value;
-    const recruitmentPrice = parseInt(recruitmentPriceString);
-    if (isNaN(recruitmentPrice)) {
+    const recruitmentCostField = document.getElementById(fieldId);
+    const recruitmentCostString = recruitmentCostField.value;
+    const recruitmentCost = parseInt(recruitmentCostString);
+    if (isNaN(recruitmentCost)) {
         alert("Input only numbers!");
-        return;
+        return recruitmentCost();
     }
-    return recruitmentPrice;
+    return recruitmentCost;
 }
 
 function setTextElementById(elementId, newValue) {
-    const totalPlayerPriceElement = document.getElementById(elementId);
-    totalPlayerPriceElement.innerText = newValue;
+    const totalPlayerCostElement = document.getElementById(elementId);
+    totalPlayerCostElement.innerText = newValue;
 }
 
 document.getElementById('calculation').addEventListener('click', function () {
-    const recruitmentPlayerPrice = recruitmentCost('perP-cost');
+    const recruitmentPlayerCost = recruitmentCost('perP-cost');
 
-    const totalPlayerPrice = recruitmentPlayerPrice * 5;
-    setTextElementById('player-expenses', totalPlayerPrice);
+    const totalPlayerCost = recruitmentPlayerCost * 5;
+    setTextElementById('player-expenses', totalPlayerCost);
 })
 
 document.getElementById('total-calculation').addEventListener('click', function () {
-    const recruitmentManagerPrice = recruitmentCost('manager-cost');
-    const recruitmentCoahPrice = recruitmentCost('coach-cost');
+    const recruitmentManagerCost = recruitmentCost('manager-cost');
+    const recruitmentCoahCost = recruitmentCost('coach-cost');
 
-    const recruitmentPlayerPrice = recruitmentCost('perP-cost');
-    const totalPlayerPrice = recruitmentPlayerPrice * 5;
+    const recruitmentPlayerCost = recruitmentCost('perP-cost');
+    const totalPlayerCost = recruitmentPlayerCost * 5;
 
-    const finalRecruitmentCost = totalPlayerPrice + recruitmentManagerPrice + recruitmentCoahPrice;
+    const finalRecruitmentCost = totalPlayerCost + recruitmentManagerCost + recruitmentCoahCost;
     setTextElementById('calculate-total', finalRecruitmentCost);
 })
